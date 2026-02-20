@@ -55,7 +55,7 @@ npx tsc --watch
 node dist/concepts/1-static-types.js
 
 # Or run TypeScript directly with tsx (install first: npm install -g tsx)
-npx tsx src/concepts/1-static-types.ts
+npx tsx --watch src/concepts/1-static-types.ts
 ```
 
 ## ⚙️ Configuration
