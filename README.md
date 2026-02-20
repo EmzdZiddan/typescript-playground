@@ -45,7 +45,7 @@ typescript-playground/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/typescript-playground.git
+git clone https://github.com/EmzdZiddan/typescript-playground.git
 cd typescript-playground
 
 # Install dependencies
