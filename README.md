@@ -17,9 +17,8 @@ typescript-playground/
 │   │   └── 6-utility-types.ts      # Built-in utility types
 │   └── playground/
 │       └── index.ts                # Free-form experimentation
-├── package.json
-├── README.md
 ├── tsconfig.json
+└── README.md
 ```
 
 ## 🧠 Concepts Covered
@@ -38,30 +37,25 @@ typescript-playground/
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) v18 or higher
-- npm v9 or higher
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/EmzdZiddan/typescript-playground.git
-cd typescript-playground
-
-# Install dependencies
-npm install
-```
+- TypeScript installed globally or via npx:
+  ```bash
+  npm install -g typescript
+  ```
 
 ### Running the Code
 
 ```bash
-# Compile TypeScript to JavaScript
-npm run build
+# Compile all TypeScript files to JavaScript (output in dist/)
+npx tsc
 
-# Run a specific file with ts-node (no compile step needed)
-npx ts-node src/concepts/1-static-types.ts
+# Compile in watch mode — recompile on file changes
+npx tsc --watch
 
-# Watch mode — recompile on file changes
-npm run dev
+# Run a compiled file
+node dist/concepts/1-static-types.js
+
+# Or run TypeScript directly with tsx (install first: npm install -g tsx)
+npx tsx src/concepts/1-static-types.ts
 ```
 
 ## ⚙️ Configuration
@@ -71,9 +65,19 @@ TypeScript compiler options are defined in `tsconfig.json`. Key settings:
 ```json
 {
   "compilerOptions": {
-    "strict": true,
+    "rootDir": "./src",
     "outDir": "./dist",
-    "rootDir": "./src"
+    "module": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true
   }
 }
 ```
