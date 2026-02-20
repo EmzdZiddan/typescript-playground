@@ -6,6 +6,7 @@ A structured learning playground for exploring TypeScript concepts — from the 
 
 ```
 typescript-playground/
+├── dist/                           # Compiled JavaScript output
 ├── src/
 │   ├── concepts/
 │   │   ├── 1-static-types.ts       # Static type annotations
@@ -16,11 +17,9 @@ typescript-playground/
 │   │   └── 6-utility-types.ts      # Built-in utility types
 │   └── playground/
 │       └── index.ts                # Free-form experimentation
-├── dist/                           # Compiled JavaScript output
 ├── package.json
-├── package-lock.json
+├── README.md
 ├── tsconfig.json
-└── README.md
 ```
 
 ## 🧠 Concepts Covered
